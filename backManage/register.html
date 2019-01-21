@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+    <link rel="stylesheet" href="css/register.css">
+</head>
+
+<body>
+    <div id="slideBox"></div>
+    <div class="register">
+        <div class="login">
+            <h3>Register</h3>
+            <p>Please fill in your information</p>
+            <form action="">
+                <input type="text" placeholder="Username">
+                <input type="password" placeholder="Enter Password">
+                <input type="password" placeholder="Confirm Password">
+                <span></span>
+                <input type="text" placeholder="name">
+                <input type="text" placeholder="family">
+                <input type="text" placeholder="Month" class="Month">
+                <input type="text" placeholder="Day" class="Year Day">
+                <input type="text" placeholder="Year" class="Year">
+                <p>
+                    <i></i>
+                    I agree to the Company 
+                    <a href="javascript:;">Terms of Service</a> and Privacy Policy
+                </p>
+                <input type="submit" class="last_input" value="SUBMIT">
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
+<script src="js/getStyle.js"></script>
+<script src="js/mover.js"></script>
+<script src="js/slider.js"></script>
+<script>
+    window.onload = function () {
+        sizes();
+    }
+    window.onresize = function () {
+        sizes();
+    }
+
+    function sizes() {
+        let sliderBox = document.getElementById("slideBox");
+        var width1 = document.documentElement.clientWidth || document.body.clientWidth;
+        var height1 = document.documentElement.clientHeight || document.body.clientHeight;
+        let s1 = new Slider(sliderBox, width1, height1, ["images/login/l2.jpg","images/login/l5.jpg", "images/login/l3.jpg", "images/login/l6.jpg"],
+            140, 30, "#ddd", "#000",
+            true, -1, 2000);
+    }
+</script>
